@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://user:password@localhost:5432/database"
+}
+
+// model Trip {
+//   id    String    @id @default(uuid())
+//   name  String
+//   location String
+//   startDate DateTime
+//   endDate DateTime
+//   pricePayDay Decimal @db.Decimal(8,2)
+//   descruption String
+//   coverImage String
+//   imageUrl String[]
+//   highlights String[]
+//   maxGuests Int
+// }
