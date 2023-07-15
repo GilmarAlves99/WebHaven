@@ -1,14 +1,19 @@
+'use client'
 import { prisma } from "@/lib/prisma";
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 
 
-const getTrips = async () =>{
-    const trips = await prisma.trip.findMany({});
-    return trips;
-}
 
-const Trips = async() =>{
-    const data = await fetch("http://jsonplaceholder.typicode.com/posts").then((res) => res.json());
+
+const Trips= () =>{
+   const [data,setData] =useState([]);
+
+   useEffect(()=>{
+    fetch("http://jsonplaceholder.typicode.com/posts")
+    .then((res)=>res.json())
+    .then((res)=>setData(res))
+   },[])
+
     return(
      <div>
         {data.map((i: any)=> (
