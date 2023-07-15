@@ -19,7 +19,7 @@ datasource db {
    imageUrl String[]
    highlights String[]
    maxGuests Int
-  reservations TripReservation[] // uma viagem tem varias reservas, uma reserva tem apenas uma viagem
+   reservations TripReservation[] // uma viagem tem varias reservas, uma reserva tem apenas uma viagem
 
  }
 
