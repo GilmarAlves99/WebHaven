@@ -1,9 +1,13 @@
-"use client";
+'use client';
 
-export default function Home(){
+import QuickSearch from "./components/QuickSearch";
+import TripSearch from "./components/TripSearch";
 
-  return (
-    <div>  
-    </div>
-  );
+export default function Home() {
+  return ( 
+   <div>
+      <TripSearch />
+      <QuickSearch />
+  </div>
+  )
 }
